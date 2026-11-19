@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fruitiantor – the Blox Fruits Akinator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bubbles" aria-hidden="true"></div>
+<div id="stage">
+  <aside id="hero">
+    <div id="glow"></div>
+    <img id="mascot" src="https://nugerguy50-afk.github.io/.1/images/Spirit.jpg" alt="Fruitiantor">
+    <div id="meter" hidden><i id="meterFill"></i></div>
+  </aside>
+
+  <main id="panel">
+    <h1>Fruitiantor</h1>
+    <div id="bubble"><p id="say">Greetings, pirate. I am Fruitiantor, master of Blox Fruits. Give me your Gemini key to begin.</p></div>
+
+    <section id="v-key" class="view">
+      <div class="row">
+        <input id="key" type="password" placeholder="Gemini API key" autocomplete="off">
+        <button id="saveKey">Enter</button>
+      </div>
+      <p class="hint">Free key: aistudio.google.com/apikey. It stays in your browser only.</p>
+    </section>
+
+    <section id="v-menu" class="view" hidden>
+      <div id="cats"></div>
+    </section>
+
+    <section id="v-game" class="view" hidden>
+      <div class="meta"><span id="catName"></span><span id="qNum"></span></div>
+      <div id="answers">
+        <button data-a="Yes">Yes</button>
+        <button data-a="Probably">Probably</button>
+        <button data-a="I don't know">Don't know</button>
+        <button data-a="Probably not">Probably not</button>
+        <button data-a="No">No</button>
+      </div>
+      <button id="back" class="ghost">Undo last answer</button>
+    </section>
+
+    <section id="v-result" class="view" hidden>
+      <div class="imgwrap"><img id="guessImg" alt=""><span id="imgSrc"></span></div>
+      <h2 id="guessName"></h2>
+      <div class="row center">
+        <button id="right">Yes, that's it!</button>
+        <button id="wrong" class="ghost">No, keep going</button>
+      </div>
+    </section>
+
+    <section id="v-giveup" class="view" hidden>
+      <div class="row">
+        <input id="truth" placeholder="Type the name (e.g. Spikey Trident)">
+        <button id="showTruth">Show</button>
+      </div>
+      <div class="imgwrap" id="truthWrap" hidden><img id="truthImg" alt=""><span id="truthSrc"></span></div>
+    </section>
+
+    <p id="err" role="alert" hidden></p>
+    <button id="restart" class="ghost" hidden>New game</button>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
